@@ -29,20 +29,35 @@ czy dany argumentem metody punkt znajduje się w wielokącie, na rzecz którego 
 metoda. Zaimplementuj w niej algorytm podany pseudokodem:
 
 Dane są: wielokąt poly i sprawdzany punkt point.
+
 counter = 0
+
 Dla każdej pary (pa, pb) punktów tworzących krawędź wielokąta poly:
+
 Jeżeli pa.y > pb.y:
+
 Zamień pa z pb
+
 Jeżeli pa.y < point.y < pb.y:
+
 d = pb.x - pa.x
+
 Jeżeli d == 0:
+
 x = pa.x
+
 W przeciwnym razie:
+
 a = (pb.y - pa.y) / d
+
 b = pa.y - a * pa.x
+
 x = (point.y - b) / a
+
 Jeżeli x < point.x:
+
 counter++
+
 Zwróć prawdę, jeżeli counter jest nieparzysty, a fałsz w przeciwnym przypadku.
 
 Krok 4.
